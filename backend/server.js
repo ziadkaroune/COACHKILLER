@@ -33,10 +33,10 @@ app.post('/api/llmConnection' ,async(req ,res)=>{
             const data = await response.json();
             res.json({result : data.choices[0].message.content });
     }
-    catch(err){
-            console.log("ouups something is wrong");
-            res.status(500).json({error : 'Server error'});
-    }
+catch (err) {
+    console.error("Error caught:", err);
+    res.status(500).json({ error: 'Server error' });
+}
 })
 
 

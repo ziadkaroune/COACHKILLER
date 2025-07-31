@@ -11,6 +11,7 @@ const InputForm = () => {
     }
     else{
         setValiDateMessage(false);
+         setToughInput(text);
     }
   }
   return (
@@ -32,7 +33,7 @@ const InputForm = () => {
         <button
           onClick={() => submitThought(text)}
           disabled={!text.trim()}
-          className="w-full md:w-auto px-6 py-2 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-800 disabled:opacity-50 transition"
+          className="w-full mb-5 md:w-auto px-6 py-2 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-800 disabled:opacity-50 transition"
         >
           Generate
         </button>
