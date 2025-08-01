@@ -58,14 +58,14 @@ cd COACHKILLER
 
 ### Running frontend
 ```bash
-cd Frontend
+cd frontend
 npm install
 npm run dev
 http://localhost:5173/ (depends your vite port config)
 ```
 ### Running backend
 ```bash
-cd Backend
+cd backend
 
 create .env file \
 API_KEY=your_apikey_here (without a space check .env.example)\
