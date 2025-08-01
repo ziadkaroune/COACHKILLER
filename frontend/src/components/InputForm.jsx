@@ -3,22 +3,20 @@ import ThoughtOutput from './ThoughtOutput'
 const InputForm = () => {
   const [text, setText] = useState("");
   const [toughtInput , setToughInput] = useState("");
-  const [validateMessage , setValiDateMessage] = useState(false);
   function submitThought(){
-    if(text.trim().length > 3){
+    if(text.trim().length > 0){
         setToughInput(text);
-        setValiDateMessage(true);
     }
     else{
-        setValiDateMessage(false);
-         setToughInput(text);
+         setToughInput("");
     }
   }
   return (
     <>
-    <section className="max-w-xl mx-auto mt-16 px-6">
-      <h2 className="text-2xl font-semibold text-gray-900 mb-4 tracking-tight">
-         Enter a thought you'd like to reframe
+    <section className="max-w-xl mx-auto mt-16 px-6 min-h-[300px] flex justify-center items-center">
+      <div>
+      <h2 className="text-4xl font-semibold  text-gray-900 mb-4 tracking-tight">
+         What’s on your mind? Let’s flip that thought
       </h2>
 
       <div className="space-y-4">
@@ -38,9 +36,10 @@ const InputForm = () => {
           Generate
         </button>
       </div>
+      </div>
     </section>
    
-    {validateMessage && <ThoughtOutput cleanUserinput={toughtInput} />}
+    {toughtInput && <ThoughtOutput cleanUserinput={toughtInput} />}
     </>
   );
 };
