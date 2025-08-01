@@ -49,12 +49,12 @@ const UseFetch = ({ useInput }) => {
 
   return (
     <div
-      className="flex flex-nowrap overflow-x-auto space-x-6 px-6 py-8 w-screen scroll-smooth"
+      className="flex noscroll flex-nowrap  space-x-6 px-6 py-8 w-screen  snap-x snap-mandatory"
     >
       {outputPrompt.map((sectionHtml, index) => (
         <div
           key={index}
-          className="premium-card  flex-none w-[580px] max-w-full bg-gradient-to-br from-zinc-900 to-zinc-800 text-white px-8 py-10 rounded-3xl shadow-[0_12px_24px_rgba(0,0,0,0.25)] hover:shadow-[0_16px_32px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col gap-4"
+          className="premium-card  flex-none w-[580px] max-w-full bg-black text-white px-8 py-10 rounded-3xl shadow-[0_12px_24px_rgba(0,0,0,0.25)] hover:shadow-[0_16px_32px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col gap-4"
           dangerouslySetInnerHTML={{ __html: sectionHtml }}
         />
       ))}
