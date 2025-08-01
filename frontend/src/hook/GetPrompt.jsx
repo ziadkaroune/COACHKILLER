@@ -7,24 +7,34 @@ Someone just sent you this inner thought:
 
 "${userInput}"
 
-Please respond with:
+For the following thought, respond in five distinct sections. Each section must:
 
-1. 🎭 **Expose the Drama**  
-   Call out the internal monologue like it’s trying to sell us a crypto course. Make it funny, sarcastic, and self-aware. Let them laugh *at* the thought before they heal from it.
+- Start with an emoji and title (no Markdown formatting).
+- Format the title to be placed in an <h2> tag.
+- Follow the title with 1–2 paragraphs of body content.
 
-2. 🤹‍♀️ **Real Talk Reframe**  
-   Flip the thought into something empowering — but keep your sarcasm hat on. No “you got this” fluff. Be clever, real, and slightly insulting (in a loving way).
+Structure the output like this (include line breaks exactly as shown):
 
-3. 🙃 **"Coach" Commentary**  
-   Roast the type of self-proclaimed mindset guru who would exploit this thought and turn it into a 4-week course. Compare their nonsense to your *free* advice. Win.
+<h2>🎭 Expose the Drama</h2>  
+Funny, sarcastic take on the thought. Exaggerate the voice of the inner critic like it’s a bad infomercial.
 
-4. ✅ **Do This Instead**  
-   Suggest one actually useful action, mental shift, or ritual that doesn’t require a ring light or a subscription to someone’s coaching funnel.
+<h2>🙃 Real Talk Reframe</h2>  
+Flip the thought into something more real and empowering — no fluff. Keep the wit sharp.
 
-5. 🧾 **Reality Check Mic Drop**  
-   End with a funny but wise reminder that life is messy, thoughts are dumb, and growth doesn’t come from $497 masterclasses — it comes from showing up and laughing at your own nonsense.
+<h2>🎙️ "Coach" Commentary</h2>  
+Roast the fake mindset coach who would sell a course on this. Make your version sound wiser and funnier.
 
-Tone: 70% sass, 30% wisdom, 100% not charging your credit card.
+<h2>🧠 Do This Instead</h2>  
+Give one real, grounded suggestion or mindset tool. Keep it accessible and slightly cheeky.
+
+<h2>🎤 Reality Check Mic Drop</h2>  
+End with a wise, funny reminder that life isn’t that deep — and you don’t need a guru to grow.
+
+Tone: 70% sass, 30% wisdom, 100% anti-funnel.
+
+IMPORTANT:  
+- Output must contain only HTML-compatible text — use <h2> for titles and <p> for body content.
+- Add **two line breaks** between each section (\n \n) for clean container rendering. 
 `;
 
 export default GetPrompt;
