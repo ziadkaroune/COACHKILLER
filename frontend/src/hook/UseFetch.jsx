@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getPrompt from "./GetPrompt"; // assuming this is a function, not a React component
+import getPrompt from "./GetPrompt"; 
 import LoadingA from "../components/LoadingAnimation";
 
 const UseFetch = ({ useInput }) => {
@@ -9,7 +9,7 @@ const UseFetch = ({ useInput }) => {
 
   const getThoughtFromLLM = async () => {
     try {
-      const promptInput = getPrompt(useInput); // call the function, not use as component
+      const promptInput = getPrompt(useInput);  
       const fdata = await fetch("http://localhost:3000/api/llmConnection", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -20,8 +20,7 @@ const UseFetch = ({ useInput }) => {
 
       const response = await fdata.json();
 
-      // Assuming response.result is a full HTML string with <h2> and <p>
-      // Split by double newlines to get each section
+
       const sections = response.result
           .split('\n\n')
           .map(section => section.trim())

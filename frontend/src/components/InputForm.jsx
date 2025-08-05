@@ -9,6 +9,7 @@ const InputForm = () => {
     }
     else{
          setToughInput("");
+         setText(""); 
     }
   }
   return (
